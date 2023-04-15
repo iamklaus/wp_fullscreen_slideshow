@@ -1,6 +1,6 @@
 /*
-Theme Name: iamklaus Slideshow 
-Theme URI: 
+Theme Name: iamklaus FullScreen & Responsive Slideshow 
+Theme URI: https: //iamklaus.org/de/fullscreen-bilder-slideshow-theme-fur-wordpress/
 Author: Klaus Gollwitzer 
 Author URI: https://iamklaus.org
 Version: 1.0.0
@@ -9,3 +9,48 @@ License URI: <https://www.gnu.org/licenses/gpl-2.0.html>
 Text Domain: iamklaus_slideshow 
 Tags: custom-background
 */
+
+body {
+    font-size: 1.5em;
+    text-shadow: black 1px 0 10px;
+}
+
+h1 {
+    font-size: 3.0em;
+    text-align: center;
+}
+
+.carousel-caption {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.carousel-item {
+    height: 100vh;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+    transition: opacity ease-out .7s;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+    opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+}
